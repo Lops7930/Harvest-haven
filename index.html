@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harvest Haven - Fruit Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: beige;
+            color: #333;
+        }
+        header {
+            background-color: green;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .product {
+            width: 200px;
+            margin: 15px;
+            text-align: center;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: white;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Harvest Haven</h1>
+        <p>Your fresh fruit shop online</p>
+        <p>Located at MWITU CENTRE BUILDING, MERU, Shop No 5</p>
+        <p>Free delivery within Meru town!</p>
+    </header>
+
+    <div class="product-container">
+        <!-- Product 1: Oranges -->
+        <div class="product">
+            <img src="https://lops7930.github.io/Images/orange.jpg" alt="Oranges">  <!-- Oranges Image -->
+            <h3>Oranges</h3>
+            <p>20 KSH each</p>
+            <button class="button" onclick="addToCart('Oranges', 20)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2: Lemon -->
+        <div class="product">
+            <img src="https://lops7930.github.io/Images/lemon.jpg" alt="Lemon">  <!-- Lemon Image -->
+            <h3>Lemon</h3>
+            <p>3 for 10 KSH</p>
+            <button class="button" onclick="addToCart('Lemon', 10, 3)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3: Grapes -->
+        <div class="product">
+            <img src="https://lops7930.github.io/Images/grapes.jpg" alt="Grapes">  <!-- Grapes Image -->
+            <h3>Grapes</h3>
+            <p>40 KSH per bunch</p>
+            <button class="button" onclick="addToCart('Grapes', 40)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4: Mangoes -->
+        <div class="product">
+            <img src="https://lops7930.github.io/Images/mango.jpg" alt="Mangoes">  <!-- Mangoes Image -->
+            <h3>Mangoes</h3>
+            <p>25 KSH each</p>
+            <button class="button" onclick="addToCart('Mangoes', 25)">Add to Cart</button>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 30px; padding: 10px 0; background-color: green; color: white;">
+        <p>Contact us: 0708952210 | Email: <a href="mailto:lopezbrycen@gmail.com" style="color: white;">lopezbrycen@gmail.com</a></p>
+    </footer>
+
+    <script>
+        function addToCart(product, price, quantity = 1) {
+            alert(product + " added to your cart. Total price: " + (price * quantity) + " KSH");
+            // Implement the cart logic here, such as adding the item to an array or updating the UI with the cart total.
+        }
+    </script>
+</body>
+</html>
